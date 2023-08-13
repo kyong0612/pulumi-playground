@@ -16,5 +16,5 @@ gcp.project.list:
 .PHONY: gcp.project.init
 gcp.project.init:
 	gcloud auth login
-	gcloud config set project $(PROJECT_ID)
 	gcloud auth application-default login
+	pulumi config set gcp:project $(PROJECT_ID)
